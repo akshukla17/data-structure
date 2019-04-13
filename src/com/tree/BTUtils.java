@@ -22,11 +22,26 @@ public class BTUtils {
 		if(root.right !=null) inorderUtil(root.right);
 	}
 	
-	// *******TODO***********Inorder without recursion****
+	// ***************Inorder without recursion********
 		public static void inorderWithoutRec(BasicBinaryTree tree) {
 			if(tree.root == null) System.out.println("Tree is empty");
 			Node cur = tree.root;
 			Stack<Node> stack = new Stack<Node>();
+			stack.push(cur);
+			while(!stack.isEmpty()) {
+				while(cur.left !=null) {
+					cur =cur.left;
+					stack.push(cur);
+				}
+				Node pop = stack.pop();
+				System.out.print(pop.data+" ");
+				
+				if(pop.right !=null) {
+					cur =pop.right;
+					stack.push(cur);
+				}
+			}
+			System.out.println();
 		}
 	
 	//==================Inorder DFS traversal ends=================================

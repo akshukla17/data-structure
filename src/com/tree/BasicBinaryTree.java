@@ -20,6 +20,8 @@ public class BasicBinaryTree {
 		tree.root.right.right= new Node(6);
 		System.out.println("Inorder traversal");
 		BTUtils.inorderTraversal(tree);
+		System.out.println("Inorder traversal without recursion");
+		BTUtils.inorderWithoutRec(tree);
 		System.out.println("Preorder traversal");
 		BTUtils.preorderTraversal(tree);
 		System.out.println("Postorder traversal");
