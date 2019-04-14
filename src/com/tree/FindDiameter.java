@@ -10,9 +10,9 @@ public class FindDiameter {
 		root = new Node(d);
 	}
 	public static void main(String []args) {
-		FindDiameter tree = new FindDiameter(1);
-		root.left = new Node(2);
+		root = new Node(1);
 		
+		root.left = new Node(2);
 		root.left.left = new Node(4);
 		root.left.left.left = new Node(6);
 		root.left.left.right = new Node(7);

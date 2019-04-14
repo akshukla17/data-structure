@@ -6,6 +6,29 @@ import java.util.Stack;
 
 public class BTUtils {
 	
+	
+	
+	/**
+	 		        1
+		          /    \
+		        2       3
+		      /  \      /
+		    4     5    8 
+		              /
+		             7
+	 
+	 */
+	public static Node createTree(Node node) {
+		node=new Node(1);
+		node.left = new Node(2);
+		node.right = new Node(3);
+		node.left.left = new Node(4);
+		node.left.right = new Node(5);
+		node.right.left = new Node(8);
+		node.right.left.left = new Node(7);
+		return node;
+	}
+	
 	//==================Inorder DFS traversal starts===================================
 	public static void inorderTraversal(BasicBinaryTree tree) {
 		if(tree.root == null) System.out.println("Tree is empty");
@@ -14,7 +37,7 @@ public class BTUtils {
 		}
 		System.out.println();
 	}
-	private static void inorderUtil(Node root) {
+	public static void inorderUtil(Node root) {
 		if(root.left !=null) inorderUtil(root.left);
 	
 		System.out.print( root.data+ " ");
