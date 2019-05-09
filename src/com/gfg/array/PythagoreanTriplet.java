@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class PythagoreanTriplet {
 
 	public static void main(String[] args) {
-		int a [] = {};//{13,0,9,6,14,12,5};
+		int a [] = {13,0,9,6,14,12,5};
 		System.out.println("original array");
 		ArrayUtils.print(a);
 		System.out.println("given array is pythagorean triplet: "+ check(a));
